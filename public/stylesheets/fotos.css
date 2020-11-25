@@ -1,0 +1,33 @@
+/*Seccion FOTOS*/
+
+.fotos{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+
+.fotos img{
+	border-radius: 15px;
+	cursor: pointer;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+}  
+
+.fotos img:hover{
+	opacity: 0.3;
+	border: 4px solid white;
+}
+
+.fotos h3, h4{
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+@media screen and (max-width: 480px){
+	.fotos{
+		display: flex;
+		flex-direction: column;
+	}
+}

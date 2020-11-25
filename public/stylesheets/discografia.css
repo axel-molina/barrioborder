@@ -1,0 +1,25 @@
+/* Seccion DISCOGRAFÍA */
+
+
+.discografia div{
+	color: honeydew;
+	font-family: 'Lato';
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.discografia .portada{
+	max-width: 30%;
+	cursor: pointer;
+}
+
+.discografia .portada:hover{
+	opacity: 0.5;
+} 
+
+iframe{
+	width: 80%;
+}
+
+

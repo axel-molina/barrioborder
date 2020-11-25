@@ -1,0 +1,22 @@
+/* Banner principal */
+
+.banner{
+	clear: both;
+	width: 100%;
+	padding-top: 29px;
+}
+
+.animacion video{
+	width: 100%;
+	height: 625px;
+}
+
+@media screen and (max-width: 600px){
+	.banner{
+		padding-top: 2%;
+	}
+
+	.animacion video{
+		height: 50%;
+	}
+}

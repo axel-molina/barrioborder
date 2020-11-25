@@ -1,0 +1,63 @@
+body{
+    font-family: 'Lato', sans-serif;
+    background: black;
+}
+
+.banner a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.banner h1{
+    color: orange;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+.galeria{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: center;
+}
+
+.foto{
+    padding: 5px;
+    background: black;
+}
+
+.foto img{
+    max-width: 100%;
+}
+
+.doble{
+    grid-row-end: span 2;
+}
+
+p a{
+    color: orange;
+    padding: 50px;
+}
+
+footer{
+	color: white;
+	text-align: center;
+	font-family: Arial;
+	padding: 60px 0 10px 70px;
+	box-sizing: border-box;
+}
+
+footer a{
+	float: right;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 600px){
+	footer{
+		padding: 0;
+	}
+}

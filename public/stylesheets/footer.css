@@ -1,0 +1,28 @@
+/* Pie */
+
+footer{
+	color: white;
+	text-align: center;
+	font-family: Arial;
+	padding: 10px 0 10px 220px;
+	box-sizing: border-box;
+}
+
+footer a{
+	text-decoration: none;
+	float: right;
+	margin-right: 3%;
+	color: orange;
+}
+
+@media screen and (max-width: 600px){
+	footer{
+		padding: 0;
+	}
+
+	footer a{
+		float: none;
+		text-decoration: none;
+		color: orange;
+	}
+}

@@ -1,0 +1,135 @@
+/* Barra de navegacion */
+
+header{
+    font-family: 'Alata';
+    font-size: 18px;
+}
+
+header nav ul{ /*Elimina las viñetas de la lista, los margenes, el padding y deja posiscion fija en ul*/
+	list-style-type: none; 
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+	box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.95);
+
+}
+
+li{ /*Flotamos las palabras y diseñamos bloques*/
+	float: left;
+}
+
+li a {
+	
+	display: block;
+	color: #e08a27;
+	text-align: center;
+	padding: 12px 25px;
+	text-decoration: none;
+	transition: .2s;
+}
+
+li a:hover{
+	background-color: rgba(224,138,39,1);
+	color: black;
+}
+
+header nav ul a img{ /*icono del nav*/
+	margin: 4px 0 0 6px;
+	width: 45px;
+	float: left;
+}
+
+.redes{
+	padding-left: 84%;
+}
+
+.redes a img{
+	display: block;
+	width: 11%;
+	margin: 9px;
+
+}
+
+.redes a img:hover{
+	opacity: 0.5;
+}
+
+.menu-toggle{
+	display: none;
+	color: white;
+	filter: contrast(200%);
+	margin-left: 90%;
+	line-height: 60px;
+	font-size: 25px;
+	cursor: pointer;
+	position: fixed;
+	z-index: 9999;
+}
+
+.show{
+	height: 305px !important; 
+}
+
+@media screen and (max-width: 1249px){
+	.redes{
+		padding-left: 80%;
+	}
+}
+
+
+@media screen and (max-width: 1160px){
+	nav ul li{
+		float: none;
+	}
+
+	nav ul li .seccion{
+		padding: 12px 60px;
+	}
+
+	header nav ul{
+		position: static;
+		
+	}
+	
+	.redes{
+		padding-left: 33%;
+	}
+	.redes a img{
+		margin: 1%;
+		width: 4%;
+		padding-left: 5%;
+	}
+
+}
+
+@media screen and (max-width: 947px){
+	nav ul li{
+		box-shadow: none;
+	}
+
+	.menu-toggle{
+		display: block;
+	}
+
+	#menu{
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		transition: .2s ease-out;
+	}
+
+	header nav ul{
+		background-color: black;
+	}
+
+
+}
