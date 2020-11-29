@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="/stylesheets/contacto.css">
 	<link rel="stylesheet" href="/stylesheets/footer.css">
 	<script src="https://kit.fontawesome.com/b283325f5f.js" crossorigin="anonymous"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 </head>
 <body>
@@ -34,22 +35,22 @@
 				    	<img alt="Barrio logo" src="/images/logo.ico">
 				    </a>
 				    <li>
-					    <a class="seccion" href="#videos">VIDEOS</a>
+					    <a onclick="$('#videos').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">VIDEOS</a>
 				    </li>
 				    <li>
-					    <a href="#fotos">FOTOS</a>
+					    <a onclick="$('#fotos').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">FOTOS</a>
 				    </li>
 				    <li>
-					    <a href="#novedades">NOVEDADES</a>
+					    <a onclick="$('#novedades').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">NOVEDADES</a>
 				    </li>
 				    <li>
-					    <a href="#biografia">BIOGRAFÍA</a>
+					    <a onclick="$('#biografia').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">BIOGRAFÍA</a>
 				    </li>
 				    <li>
-					    <a href="#discografia">DISCOGRAFÍA</a>
+					    <a onclick="$('#discografia').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">DISCOGRAFÍA</a>
 				    </li>
 				    <li>
-					    <a href="#contacto">CONTACTO</a>
+					    <a onclick="$('#contacto').animatescroll({scrollSpeed:2000,easing:'easeOutBack'});">CONTACTO</a>
 					</li>    
 					<div class="redes">
 						<a href="https://www.facebook.com/BarrioBorderRock/" target="_blank">
@@ -199,6 +200,7 @@
 	</div>
 	<script src="/javascripts/aos.js"></script>
 	<script src="/javascripts/menu.js"></script>
+	<script src="/javascripts/animatescroll.js"></script>
 <script>
   AOS.init();
 </script>
