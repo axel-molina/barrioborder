@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3" style="margin-top: 100px;">
+            <h4>Modificar la novedad</h4>
+            <form action="/admin/novedades/modificar" method="post">
+            <input type="hidden" value="{{novedades.id}}" name="id">
+                <div class="mb-3">
+                <label style="color: white;" for="exampleInputEmail1" class="form-label">Titulo</label>
+                <input type="text" class="form-control" name="titulo" value="{{novedades.titulo}}">
+            </div>
+            <div class="mb-3">
+                <label style="color: white;" for="exampleInputPassword1" class="form-label">Subtitulo</label>
+                <input type="text" class="form-control" name="subtitulo" value="{{novedades.subtitulo}}">
+            </div>
+            <div class="mb-3">
+                <label style="color: white;" for="exampleInputPassword1" class="form-label">Cuerpo</label>
+                <textarea type="text" class="form-control" name="cuerpo">{{novedades.cuerpo}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Guardar</button>
+            </form>
+            {{#if error}}
+            <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

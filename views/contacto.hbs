@@ -1,0 +1,23 @@
+<section id="contacto" data-aos="flip-left">
+    <div class="formulario">
+        <h2>CONTACTO</h2>
+        <form action="/contacto" method="POST">
+            <p>
+                <input type="text" name="nombre" placeholder="Nombre" required>
+            </p>
+            <p>
+                <input type="text" name="apellido" placeholder="Apellido">
+            </p>
+            <p>
+                <input type="email" name="email" placeholder="Email" required>
+            </p>
+            <p>
+                <textarea name="mensaje" placeholder="Deja tu mensaje" required></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </form>
+        <p>{{message}}</p>
+    </div>
+</section>

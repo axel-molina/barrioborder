@@ -1,5 +1,8 @@
 /* Seccion DISCOGRAFÍA */
 
+#discografia{
+	padding-top: 40px;
+}
 
 .discografia div{
 	color: honeydew;
@@ -17,6 +20,7 @@
 .discografia .portada:hover{
 	opacity: 0.5;
 } 
+
 
 iframe{
 	width: 80%;

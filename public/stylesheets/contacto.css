@@ -40,6 +40,10 @@
 	cursor: pointer;
 }
 
+.formulario p{
+	color: green;
+}
+
 @media screen and (max-width: 600px){
 	.formulario input, .formulario textarea{
 		width: 90%;

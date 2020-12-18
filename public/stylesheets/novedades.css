@@ -1,4 +1,8 @@
 
+.novedades{
+    padding-top: 40px;
+}
+
 .novedades p, .novedades h3, .novedades h4{
     color: white;
     font-family: 'Lato'; 

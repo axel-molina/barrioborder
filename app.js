@@ -4,8 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config(); // carga los datos del .env
+var session = require('express-session');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var biografiaRouter = require('./routes/biografia');
+var fotosRouter = require('./routes/fotos');
+var videosRouter = require('./routes/videos');
+var discografiaRouter = require('./routes/discografia');
+var novedadesRouter = require('./routes/novedades');
+var contactoRouter = require('./routes/contacto');
+var flouRouter = require('./routes/flou');
+var culturaRouter = require('./routes/cultura');
+var loginRouter = require('./routes/admin/login'); // pagina login.js dentro de admin
+var adminNovedadesRouter = require('./routes/admin/novedades');
 
 var app = express();
 
@@ -19,8 +32,37 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret:'BB2020C',
+  cookie: {maxAge: null},
+  resave: false,
+  saveUninitialized: true
+}))
+
+secured = async(req,res,next) => {
+  try{
+    if(req.session.id_usuario){
+      next();
+    }else{
+      res.redirect('/admin/login');
+    }
+  }catch(error){
+    console.log(error);
+  }
+}
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/biografia', biografiaRouter);
+app.use('/contacto', contactoRouter);
+app.use('/discografia', discografiaRouter);
+app.use('/flou', flouRouter);
+app.use('/fotos', fotosRouter);
+app.use('/novedades', novedadesRouter);
+app.use('/videos', videosRouter);
+app.use('/cultura', culturaRouter);
+app.use('/admin/login', loginRouter);
+app.use('/admin/novedades', secured, adminNovedadesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
